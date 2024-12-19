@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ShipPlacementPage()),
+                    MaterialPageRoute(builder: (context) => PlacementScreen()),
                   );
                 },
                 child: const Text('Play'),
