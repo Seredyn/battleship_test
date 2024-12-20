@@ -18,7 +18,7 @@ class PlacementScreen extends StatelessWidget {
         create: (_) => FieldBloc(),
         // Ініціалізація BLoC для управління станом
         child: Scaffold(
-          appBar: AppBar(title: Text('Розстав кораблі')),
+          appBar: AppBar(title: const Text('Розстав кораблі')),
           // Заголовок сторінки
           body: Column(
             children: [
@@ -68,7 +68,7 @@ class PlacementScreen extends StatelessWidget {
                                 child: GridView.builder(
                                   // Визначаємо 10x10 поле
                                   gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 10, // Кількість стовпців
                                   ),
                                   itemCount: 100, // Всього 100 клітинок
@@ -114,7 +114,7 @@ class PlacementScreen extends StatelessWidget {
                                       builder: (context, candidateData,
                                           rejectedData) {
                                         return Container(
-                                          margin: EdgeInsets.all(2),
+                                          margin: const EdgeInsets.all(2),
                                           // Проміжки між клітинками
                                           color: isHovered
                                               ? Colors.green.withOpacity(
@@ -142,7 +142,7 @@ class PlacementScreen extends StatelessWidget {
               // SizedBox(height: 20),
               // Text('with: $width'),
               // Text('height: $height'),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Панель для розміщення кораблів
               BlocBuilder<FieldBloc, FieldState>(
                 builder: (context, state) {
@@ -230,7 +230,7 @@ class _DraggableShipState extends State<DraggableShip> {
         width: 30,
         height: 30,
         color: Colors.blue, // Синій колір
-        margin: EdgeInsets.all(2),
+        margin: const EdgeInsets.all(2),
       ),
     );
   }
